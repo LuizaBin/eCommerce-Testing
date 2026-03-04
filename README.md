@@ -59,19 +59,19 @@ The project was set up in Jira using a **Scrum** template with 5 epics, 18 user 
 | BOOK-EP5 | Wishlist & User Profile |
 
 ### Product Roadmap
-![Product Roadmap](evidence/jira/Product%20Roadmap.png)
+![Product Roadmap](evidence/jira/product-roadmap.png)
 
 ### Product Board
-![Product Board](evidence/jira/Product%20board.png)
+![Product Board](evidence/jira/product-board.png)
 
 ### Sprint 1 — Active Sprint
-![Current Active Sprint](evidence/jira/Current%20Active%20Sprint.png)
+![Current Active Sprint](evidence/jira/current-active-sprint.png)
 
 ### Sprint 2
-![Other Sprint](evidence/jira/Other%20Sprint.png)
+![Other Sprint](evidence/jira/other-sprint.png)
 
 ### Sprint 3
-![Third Sprint](evidence/jira/Third%20sprint.png)
+![Third Sprint](evidence/jira/third-sprint.png)
 
 ---
 
@@ -80,16 +80,16 @@ The project was set up in Jira using a **Scrum** template with 5 epics, 18 user 
 Test cases were written in **Zephyr Scale**, organized into folders by module, and executed in test cycles mapped to each sprint.
 
 ### Test Case Folders
-![Test Cases in Folders](evidence/zephyr/Test%20cases%20in%20Folders.png)
+![Test Cases in Folders](evidence/zephyr/test-cases-in-folders.png)
 
 ### Test Cycles Overview
-![Test Cycles](evidence/zephyr/Test%20Cycles.png)
+![Test Cycles](evidence/zephyr/test-cycles.png)
 
 ### Test Cycle — Player View
-![Test Cycle Player](evidence/zephyr/Test%20Cycle%20-%20Player.png)
+![Test Cycle Player](evidence/zephyr/test-cycle-player.png)
 
 ### Test Player — Execution
-![Test Player](evidence/zephyr/Test%20Player.png)
+![Test Player](evidence/zephyr/test-player.png)
 
 ---
 
