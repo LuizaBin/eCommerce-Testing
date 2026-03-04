@@ -188,5 +188,4 @@ BookCart/
 ## 🔗 Links
 
 - **App under test:** https://bookcart.azurewebsites.net
-- **Source code:** https://github.com/AnkitSharma-007/BookCart
-- **Jira project:** [add your Jira link here]
+- **Jira project:** https://lizabinaj08.atlassian.net/jira/software/projects/BOOK/boards/135/backlog?atlOrigin=eyJpIjoiYmYzN2RhNGZiMDc1NDA1NTgyZjY5NmMyMzg1ZTMzY2EiLCJwIjoiaiJ9
