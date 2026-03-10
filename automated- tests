@@ -1,0 +1,55 @@
+import pytest
+import random
+import string
+from playwright.sync_api import Page, expect
+
+
+BASE_URL = "https://bookcart.azurewebsites.net"
+
+
+def random_username(length=10):
+    """Generate a random username to avoid duplicate registration errors."""
+    return "testuser_" + "".join(random.choices(string.ascii_lowercase + string.digits, k=length))
+
+class TestTC001Registration:
+    """
+    TC-001 | BOOK-T1 | Priority: High | Label: smoke
+    Register with all valid fields - verify account created and user redirected.
+    """
+
+    def test_register_valid_user(self, page: Page):
+        username = random_username()
+
+        # Step 1: Navigate to the login page
+        page.goto(f"{BASE_URL}/login")
+        expect(page).to_have_url(f"{BASE_URL}/login")
+
+        # Step 2: Click the Register link
+        page.get_by_role("link", name="Register").click()
+
+        # Step 3: Fill in username
+        page.get_by_label("Username").fill(​testuser02)
+
+        # Step 4: Fill in first name
+        page.get_by_label("First Name").fill("Luiza")
+
+        # Step 5: Fill in last name
+        page.get_by_label("Last Name").fill("Bin")
+
+        # Step 6: Select gender
+        page.get_by_label("Female").check()
+
+        # Step 7: Fill in password
+        page.get_by_label("Password", exact=True).fill("August2023!")
+
+        # Step 8: Fill in confirm password
+        page.get_by_label("Confirm Password").fill("August2023!")
+
+        # Step 9: Click Register button
+        page.get_by_role("button", name="Register").click()
+
+        # Assert: User is redirected to home page
+        expect(page).to_have_url(f"{BASE_URL}/")
+
+        # Assert: Username is visible in the navigation bar
+        expect(page.locator("mat-toolbar")).to_contain_text(username)
