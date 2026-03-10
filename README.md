@@ -19,6 +19,7 @@ This repository demonstrates a full QA workflow: requirements analysis, test pla
 | **Story points** | 66 |
 | **Sprints** | 3 |
 | **Test cases** | 29 (7 smoke · 20 regression · 2 edge-case) |
+| **Automated Test cases** | 2 cases - Test case 01 and 05 |
 | **Bugs found** | 1 (High severity) |
 
 ---
@@ -29,6 +30,8 @@ This repository demonstrates a full QA workflow: requirements analysis, test pla
 bookcart-qa/
 ├── README.md
 ├── All test cases.xlsx          ← full test suite export from Zephyr Scale
+├── automated-test-01            ← automated test case for BOOK-T1 - Registering with all valid fields
+├── automated-test-05            ← automated test case for BOOK-T5 - Login with valid credentials
 ├── test-cases/                  ← all 29 test cases in Markdown
 │   ├── authentication/
 │   ├── catalog/
@@ -40,6 +43,7 @@ bookcart-qa/
     ├── jira/                    ← sprint board, roadmap, backlog screenshots
     ├── zephyr/                  ← test cycles, execution, test player screenshots
     └── bug-report/              ← defect report, reproduction video
+
 ```
 
 ---
@@ -144,10 +148,10 @@ Test cases were written in **Zephyr Scale**, organized into folders by module, a
 | **Actual** | Page shows no feedback — silent failure |
 
 ### Defect Report
-![Defect Report](evidence/bug-report/Defect%20report.png)
+![Defect Report](evidence/bug-report/defect-report.png)
 
 ### Bug Reproduction Video
-> 📹 See [`evidence/bug-report/Bug Reproduction steps`](evidence/bug-report/Bug%20Reproduction%20steps) for the full reproduction recording.
+> 📹 See [`evidence/bug-report/Bug Reproduction steps`](evidence/bug-report/Bug%20Reproduction%20steps.mp4) for the full reproduction recording.
 
 ---
 
