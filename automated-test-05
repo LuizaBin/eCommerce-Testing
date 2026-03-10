@@ -8,7 +8,7 @@ PASSWORD = "August2023!"
 
 class TestTC005Login:
     """
-    TC-005 | BOOK-2 | Priority: High | Label: smoke
+    TC-005 | BOOK-T5 | Priority: High | Label: smoke
     Login with valid credentials - verify successful authentication and home page access.
 
     Precondition: A registered account exists with username testuser02 and password August2023!.
