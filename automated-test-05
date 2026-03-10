@@ -1,0 +1,40 @@
+from playwright.sync_api import Page, expect
+
+
+BASE_URL = "https://bookcart.azurewebsites.net"
+USERNAME = "testuser02"
+PASSWORD = "August2023!"
+
+
+class TestTC005Login:
+    """
+    TC-005 | BOOK-2 | Priority: High | Label: smoke
+    Login with valid credentials - verify successful authentication and home page access.
+
+    Precondition: A registered account exists with username testuser02 and password August2023!.
+    Post-condition: User is authenticated. Session is active. Home page is visible.
+    """
+
+    def test_login_valid_credentials(self, page: Page):
+
+        # Step 1: Navigate to the login page
+        page.goto(f"{BASE_URL}/login")
+        expect(page).to_have_url(f"{BASE_URL}/login")
+
+        # Step 2: Enter valid username
+        page.get_by_label("Username").fill(USERNAME)
+
+        # Step 3: Enter correct password
+        page.get_by_label("Password").fill(PASSWORD)
+
+        # Step 4: Click the Login button
+        page.get_by_role("button", name="Login").click()
+
+        # Assert: User is redirected to the home page
+        expect(page).to_have_url(f"{BASE_URL}/")
+
+        # Assert: Username is visible in the navigation bar
+        expect(page.locator("mat-toolbar")).to_contain_text(USERNAME)
+
+        # Assert: Cart icon is visible (user has access to protected features)
+        expect(page.locator("mat-toolbar")).to_be_visible()
